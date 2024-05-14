@@ -141,7 +141,7 @@ function getElementAtIndex(arr, index) {
   // Повертаємо отриманий елемент
   // Якщо індекс виходить за межі масиву,повертаємо undefined
 
-  return arr.length === 0 || index > arr.length ? undefined : arr[index];
+  return arr.length === 0 || index > arr.length ? undefined : arr.at(index);
 
   // if (arr.length === 0) {
   //   return undefined;
@@ -153,9 +153,9 @@ function getElementAtIndex(arr, index) {
 }
 
 // Приклад використання функції getElementAtIndex
-// console.log("Завдання:6 ==============================");
+console.log("Завдання:6 ==============================");
 
-// console.log(getElementAtIndex([1, 2, 3, 4, 5], 2)); // Виведе 3
+console.log(getElementAtIndex([1, 2, 3, 4, 5], 2)); // Виведе 3
 
 // Завдання:7
 
@@ -462,7 +462,7 @@ function customAt(arr, index) {
   if (!Array.isArray(arr) || index > arr.length || index < 0) {
     return undefined;
   } else {
-    let element = arr[index];
+    let element = arr.at(index);
     if (typeof element === "string") {
       return "Елемент є рядком" + element;
     } else if (typeof element === "object") {
@@ -473,8 +473,8 @@ function customAt(arr, index) {
   }
 }
 
-// console.log("Завдання: 16 ==============================");
-// console.log(customAt([1, 2, 3, 4, 5], 2));
+console.log("Завдання: 16 ==============================");
+console.log(customAt([1, 2, 3, 4, 5], 2));
 // Виведе
 // Елемент є числом.
 // 3
